@@ -1,0 +1,21 @@
+.DailyForecast {
+  border: 0.5px solid blue;
+
+  width: 8rem;
+
+  display: grid;
+  justify-items: center;
+}
+
+.DailyForecast i {
+  font-size: 2rem;
+}
+
+.date {
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.more-details {
+  font-size: 0.6rem;
+}
