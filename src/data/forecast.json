@@ -12,11 +12,12 @@
       },
       "wind": {
         "speed": 13,
-        "direction": "s"
+        "direction": "s",
+        "icon": "wi wi-wind towards-180-deg"
       },
       "humidity": 30,
       "description": "Clear",
-      "icon": "800"
+      "icon": "wi wi-day-sunny"
     },
     {
       "date": 1525132800000,
@@ -26,11 +27,12 @@
       },
       "wind": {
         "speed": 60,
-        "direction": "ne"
+        "direction": "ne",
+        "icon": "wi wi-wind towards-90-deg"
       },
       "humidity": 80,
       "description": "Stormy",
-      "icon": "211"
+      "icon": "wi wi-day-thunderstorm"
     },
     {
       "date": 1525219200000,
@@ -40,11 +42,12 @@
       },
       "wind": {
         "speed": 5,
-        "direction": "n"
+        "direction": "n",
+        "icon": "wi wi-wind towards-0-deg"
       },
       "humidity": 50,
       "description": "Heavy Snow",
-      "icon": "602"
+      "icon": "wi wi-snow"
     },
     {
       "date": 1525305600000,
@@ -54,11 +57,12 @@
       },
       "wind": {
         "speed": 150,
-        "direction": "e"
+        "direction": "e",
+        "icon": "wi wi-wind towards-270-deg"
       },
       "humidity": 80,
       "description": "Tornado",
-      "icon": "781"
+      "icon": "wi wi-tornado"
     },
     {
       "date": 1525392000000,
@@ -68,11 +72,12 @@
       },
       "wind": {
         "speed": 8,
-        "direction": "nne"
+        "direction": "nne",
+        "icon": "wi wi-wind towards-23-deg"
       },
       "humidity": 50,
       "description": "Hazy",
-      "icon": "721"
+      "icon": "wi wi-day-haze"
     }
   ]
 }

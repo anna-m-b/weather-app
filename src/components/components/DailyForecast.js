@@ -1,21 +1,31 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../../styles/DailyForecast.css';
 import '../../styles/weather-icons.min.css';
 
-const DailyForecast = () => {
+const DailyForecast = ({ date, icon, temperature, description }) => {
   return (
     <div className="DailyForecast">
-      <p className="date">Sat 6th Feb</p>
-      <i className="wi wi-day-rain" />
-      <p>
-        6°c
-        <br />
-        Rainy
-        <br />
-        <span className="more-details">More details</span>
-      </p>
+      <div className="DailyForecast_date">{date}</div>
+      <div
+        className="DailyForecast_icon"
+        role="figure"
+        aria-label={`${description} icon`}
+      >
+        <i className={icon} />
+      </div>
+      <div className="DailyForecast_temperature">{`${temperature}°c`}</div>
+      <div className="DailyForecast_description">{description}</div>
+      <div className="DailyForecast_more-details">More details</div>
     </div>
   );
+};
+
+DailyForecast.propTypes = {
+  date: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  temperature: PropTypes.number.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default DailyForecast;

@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from '../components/App';
 
-test('renders learn react link', () => {
+xtest('renders the title', () => {
   render(<App />);
-  const title = screen.getByText(/weather app/i);
+  const title = screen.getByText(/weather forecast/i);
   expect(title).toBeInTheDocument();
 });

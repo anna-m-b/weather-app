@@ -1,21 +1,38 @@
 .DailyForecast {
-  border: 0.5px solid blue;
-
-  width: 8rem;
-
+  margin: 5px;
+  /* border: 0.5px solid blue; */
+  border-radius: 15px;
+  background-color: #ffffff38;
+  width: 6.5rem;
+  height: 9rem;
   display: grid;
-  justify-items: center;
+  align-items: center;
+  padding: 5px;
+  font-size: 1rem;
+  box-shadow: 3px 0px 43px -1px rgba(82,120,210,0.75);
+  -webkit-box-shadow: 3px 0px 43px -1px rgba(82,120,210,0.75);
+  -moz-box-shadow: 3px 0px 43px -1px rgba(82,120,210,0.75);
 }
 
-.DailyForecast i {
-  font-size: 2rem;
+.DailyForecast_icon, .DailyForecast_date {
+  justify-self: center;
 }
 
-.date {
-  font-size: 0.8rem;
-  font-weight: 800;
+.DailyForecast_temperature, .DailyForecast_description, .DailyForecast_more-details {
+  padding-left: 0.6rem;
 }
 
-.more-details {
+.DailyForecast_icon {
+  font-size: 2.3rem;
+  margin: 0.2rem;
+  color: #160064;
+}
+
+
+.DailyForecast_date {
+  font-weight: 500;
+}
+
+.DailyForecast_more-details {
   font-size: 0.6rem;
 }

@@ -4,17 +4,15 @@ import PropTypes from 'prop-types';
 import WeeklyForecast from './containers/WeeklyForecast';
 import Location from './components/Location';
 import DetailedForecast from './components/DetailedForecast';
-import '../data/forecast.json';
 
 function App({ forecastData }) {
   const { location } = forecastData;
 
   return (
     <div className="App">
-      <h1>Weather Forecast</h1>
       <Location location={location} />
-      <WeeklyForecast />
-      <DetailedForecast />
+      <DetailedForecast forecastItem={forecastData.forecasts[0]} />
+      <WeeklyForecast forecast={forecastData.forecasts} />
     </div>
   );
 }

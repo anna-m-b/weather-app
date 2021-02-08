@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Location = ({ location }) => {
   return (
-    <h1>
+    <h1 className="Location">
       {location.city}, {location.country}
     </h1>
   );
