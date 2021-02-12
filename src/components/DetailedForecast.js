@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../../styles/DetailedForecast.css';
-import getStringyDate from '../../util/getStringyDate';
-import '../../styles/weather-icons-wind.min.css';
+import '../styles/DetailedForecast.css';
+import getStringyDate from '../util/getStringyDate';
+import '../styles/weather-icons-wind.min.css';
 
 const DetailedForecast = ({ forecastItem }) => {
   const { date, temperature, humidity, wind } = forecastItem;

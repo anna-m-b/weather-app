@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeeklyForecast renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="WeeklyForecast"
+  >
+    <div
+      class="DailyForecast"
+      data-testid="daily-forecast"
+    >
+      <div
+        class="DailyForecast_date"
+      >
+        Thu, 1 Jan
+      </div>
+      <figure
+        aria-label="Stub description 1 icon"
+        class="DailyForecast_icon"
+        role="figure"
+      >
+        <i
+          class="stubIcon1"
+        />
+      </figure>
+      <div
+        class="DailyForecast_temperature"
+      >
+        22°c
+      </div>
+      <div
+        class="DailyForecast_description"
+      >
+        Stub description 1
+      </div>
+      <div
+        class="DailyForecast_more-details"
+      >
+        More details
+      </div>
+    </div>
+    <div
+      class="DailyForecast"
+      data-testid="daily-forecast"
+    >
+      <div
+        class="DailyForecast_date"
+      >
+        Thu, 1 Jan
+      </div>
+      <figure
+        aria-label="Stub description2 icon"
+        class="DailyForecast_icon"
+        role="figure"
+      >
+        <i
+          class="stubIcon2"
+        />
+      </figure>
+      <div
+        class="DailyForecast_temperature"
+      >
+        24°c
+      </div>
+      <div
+        class="DailyForecast_description"
+      >
+        Stub description2
+      </div>
+      <div
+        class="DailyForecast_more-details"
+      >
+        More details
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

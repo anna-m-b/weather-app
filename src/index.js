@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './styles/index.css';
 import 'normalize.css';
 import './styles/weather-icons.min.css';
-import App from './components/App';
+import App from './App';
 import forecastData from './data/forecast.json';
 
 ReactDOM.render(

@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DailyForecast renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="DailyForecast"
+    data-testid="daily-forecast"
+  >
+    <div
+      class="DailyForecast_date"
+    >
+      Mon 8th Feb
+    </div>
+    <figure
+      aria-label="Rainy icon"
+      class="DailyForecast_icon"
+      role="figure"
+    >
+      <i
+        class="wi wi-day-rain"
+      />
+    </figure>
+    <div
+      class="DailyForecast_temperature"
+    >
+      6°c
+    </div>
+    <div
+      class="DailyForecast_description"
+    >
+      Rainy
+    </div>
+    <div
+      class="DailyForecast_more-details"
+    >
+      More details
+    </div>
+  </div>
+</DocumentFragment>
+`;
