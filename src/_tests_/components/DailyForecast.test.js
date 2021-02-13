@@ -4,10 +4,11 @@ import DailyForecast from '../../components/DailyForecast';
 
 describe('DailyForecast', () => {
   const validProps = {
-    date: 'Mon 8th Feb',
-    icon: 'wi wi-day-rain',
+    date: 1525392000000,
+    icon: '501',
     description: 'Rainy',
     temperature: 6,
+    handleMoreDetailsClick: () => {},
   };
 
   it('renders correctly', () => {
@@ -17,26 +18,21 @@ describe('DailyForecast', () => {
 
   describe('it renders each element based on props', () => {
     beforeEach(() => {
-      render(
-        <DailyForecast
-          date="Mon 8th Feb"
-          icon="wi wi-day-rain"
-          description="Rainy"
-          temperature={6}
-        />
-      );
+      render(<DailyForecast {...validProps} />);
     });
 
     it('renders the date', () => {
-      expect(screen.getByText('Mon 8th Feb')).toBeTruthy();
-      expect(screen.getByText('Mon 8th Feb')).toHaveClass('DailyForecast_date');
+      expect(screen.getByText('Fri, 4 May')).toBeTruthy();
+      expect(screen.getByText('Fri, 4 May')).toHaveClass('DailyForecast_date');
     });
 
     it('renders a weather icon', () => {
-      expect(screen.getByRole('figure', { name: /rainy/i })).toBeTruthy();
-      expect(screen.getByRole('figure', { name: /rainy/i })).toHaveClass(
-        'DailyForecast_icon'
-      );
+      expect(
+        screen.getByTestId('weather-icon', { name: /rainy/i })
+      ).toBeTruthy();
+      expect(
+        screen.getByTestId('weather-icon', { name: /rainy/i })
+      ).toHaveClass('DailyForecast_icon');
     });
 
     it('renders the temperature', () => {

@@ -4,11 +4,10 @@ import './styles/index.css';
 import 'normalize.css';
 import './styles/weather-icons.min.css';
 import App from './App';
-import forecastData from './data/forecast.json';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App forecastData={forecastData} />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

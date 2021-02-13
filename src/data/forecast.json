@@ -17,7 +17,7 @@
       },
       "humidity": 30,
       "description": "Clear",
-      "icon": "wi wi-day-sunny"
+      "icon": 800
     },
     {
       "date": 1525132800000,
@@ -32,7 +32,7 @@
       },
       "humidity": 80,
       "description": "Stormy",
-      "icon": "wi wi-day-thunderstorm"
+      "icon": 211
     },
     {
       "date": 1525219200000,
@@ -47,7 +47,7 @@
       },
       "humidity": 50,
       "description": "Heavy Snow",
-      "icon": "wi wi-snow"
+      "icon": "602"
     },
     {
       "date": 1525305600000,
@@ -62,7 +62,7 @@
       },
       "humidity": 80,
       "description": "Tornado",
-      "icon": "wi wi-tornado"
+      "icon": 781
     },
     {
       "date": 1525392000000,
@@ -77,7 +77,7 @@
       },
       "humidity": 50,
       "description": "Hazy",
-      "icon": "wi wi-day-haze"
+      "icon": 721
     }
   ]
 }

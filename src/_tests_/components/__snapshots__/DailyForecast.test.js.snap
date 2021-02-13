@@ -9,17 +9,14 @@ exports[`DailyForecast renders correctly 1`] = `
     <div
       class="DailyForecast_date"
     >
-      Mon 8th Feb
+      Fri, 4 May
     </div>
-    <figure
+    <i
       aria-label="Rainy icon"
-      class="DailyForecast_icon"
-      role="figure"
-    >
-      <i
-        class="wi wi-day-rain"
-      />
-    </figure>
+      class="wi wi-day-rain DailyForecast_icon"
+      data-testid="weather-icon"
+      name="owm"
+    />
     <div
       class="DailyForecast_temperature"
     >
@@ -30,11 +27,12 @@ exports[`DailyForecast renders correctly 1`] = `
     >
       Rainy
     </div>
-    <div
+    <button
       class="DailyForecast_more-details"
+      type="button"
     >
       More details
-    </div>
+    </button>
   </div>
 </DocumentFragment>
 `;

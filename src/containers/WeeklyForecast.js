@@ -1,31 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DailyForecast from '../components/DailyForecast';
-import getStringyDate from '../util/getStringyDate';
 import '../styles/WeeklyForecast.css';
 
-const WeeklyForecast = ({ forecasts }) => {
-  if (forecasts) {
-    const forecastsToDisplay = forecasts.map((forecastItem) => {
-      const { date, temperature, description, icon } = forecastItem;
-      const dateString = getStringyDate(date);
+const WeeklyForecast = ({ forecasts, handleMoreDetailsClick, errorCode }) => {
+  // eslint-disable-next-line no-console
+  console.log('WeeklyForecast rendering', { errorCode }, { forecasts });
+  let forecastsToDisplay;
+  if (errorCode) {
+    forecastsToDisplay = forecasts.map((forecastItem) => {
+      const { date } = forecastItem;
+
       return (
         <DailyForecast
-          date={dateString}
-          temperature={temperature.max}
-          description={description}
-          icon={icon}
+          date={date}
+          temperature="- - -"
+          description="- - -"
+          icon="800"
           key={date}
+          handleMoreDetailsClick={() => {}}
         />
       );
     });
-    return <div className="WeeklyForecast">{forecastsToDisplay}</div>;
+  } else if (forecasts) {
+    forecastsToDisplay = forecasts.map((forecastItem) => {
+      const { date, temperature, description, icon } = forecastItem;
+
+      return (
+        <DailyForecast
+          date={date}
+          temperature={temperature.max}
+          description={description}
+          icon={icon.toString()}
+          key={date}
+          handleMoreDetailsClick={handleMoreDetailsClick}
+        />
+      );
+    });
   }
-  return (
-    <div>
-      <h1>No data available</h1>
-    </div>
-  );
+  return <div className="WeeklyForecast">{forecastsToDisplay}</div>;
 };
 
 WeeklyForecast.propTypes = {
@@ -42,9 +55,15 @@ WeeklyForecast.propTypes = {
       }),
       humidity: PropTypes.number,
       description: PropTypes.string,
-      icon: PropTypes.string,
+      icon: PropTypes.number,
     })
   ).isRequired,
+  handleMoreDetailsClick: PropTypes.func.isRequired,
+  errorCode: PropTypes.number,
+};
+
+WeeklyForecast.defaultProps = {
+  errorCode: 0,
 };
 
 export default WeeklyForecast;

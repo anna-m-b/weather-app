@@ -14,15 +14,12 @@ exports[`WeeklyForecast renders correctly 1`] = `
       >
         Thu, 1 Jan
       </div>
-      <figure
+      <i
         aria-label="Stub description 1 icon"
-        class="DailyForecast_icon"
-        role="figure"
-      >
-        <i
-          class="stubIcon1"
-        />
-      </figure>
+        class="wi wi-day-rain DailyForecast_icon"
+        data-testid="weather-icon"
+        name="owm"
+      />
       <div
         class="DailyForecast_temperature"
       >
@@ -33,11 +30,12 @@ exports[`WeeklyForecast renders correctly 1`] = `
       >
         Stub description 1
       </div>
-      <div
+      <button
         class="DailyForecast_more-details"
+        type="button"
       >
         More details
-      </div>
+      </button>
     </div>
     <div
       class="DailyForecast"
@@ -48,15 +46,12 @@ exports[`WeeklyForecast renders correctly 1`] = `
       >
         Thu, 1 Jan
       </div>
-      <figure
+      <i
         aria-label="Stub description2 icon"
-        class="DailyForecast_icon"
-        role="figure"
-      >
-        <i
-          class="stubIcon2"
-        />
-      </figure>
+        class="wi wi-day-sunny DailyForecast_icon"
+        data-testid="weather-icon"
+        name="owm"
+      />
       <div
         class="DailyForecast_temperature"
       >
@@ -67,11 +62,12 @@ exports[`WeeklyForecast renders correctly 1`] = `
       >
         Stub description2
       </div>
-      <div
+      <button
         class="DailyForecast_more-details"
+        type="button"
       >
         More details
-      </div>
+      </button>
     </div>
   </div>
 </DocumentFragment>

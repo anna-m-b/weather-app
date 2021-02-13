@@ -8,15 +8,14 @@ const DetailedForecast = ({ forecastItem }) => {
   const { date, temperature, humidity, wind } = forecastItem;
   const { max, min } = temperature;
   const { speed, icon } = wind;
-  const dateString = getStringyDate(date);
 
   return (
     <div className="DetailedForecast">
-      <div className="DetailedForecast_date">{dateString}</div>
+      <div className="DetailedForecast_date">{getStringyDate(date)}</div>
 
       <div className="DetailedForecast_max-temp">{`Max Temperature: ${max}°c`}</div>
 
-      <div className="DetailedForecast_min-temp">{`Max Temperature: ${min}°c`}</div>
+      <div className="DetailedForecast_min-temp">{`Min Temperature: ${min}°c`}</div>
 
       <div className="DetailedForecast_humidity">{`Humidity: ${humidity}`}</div>
 

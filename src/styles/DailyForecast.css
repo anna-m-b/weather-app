@@ -18,7 +18,7 @@
   justify-self: center;
 }
 
-.DailyForecast_temperature, .DailyForecast_description, .DailyForecast_more-details {
+.DailyForecast_temperature, .DailyForecast_description {
   padding-left: 0.6rem;
 }
 
@@ -34,5 +34,13 @@
 }
 
 .DailyForecast_more-details {
+  background: none;
+  border: 0;
+  padding: 0;
+  padding-left: 0.6rem;
   font-size: 0.6rem;
+  text-align: left;
+  text-decoration: underline;
+  color: #160064;
+  cursor: pointer;
 }
