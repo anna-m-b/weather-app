@@ -4,8 +4,6 @@ import DailyForecast from '../components/DailyForecast';
 import '../styles/WeeklyForecast.css';
 
 const WeeklyForecast = ({ forecasts, handleMoreDetailsClick, errorCode }) => {
-  // eslint-disable-next-line no-console
-  console.log('WeeklyForecast rendering', { errorCode }, { forecasts });
   let forecastsToDisplay;
   if (errorCode) {
     forecastsToDisplay = forecasts.map((forecastItem) => {

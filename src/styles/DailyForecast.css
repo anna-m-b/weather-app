@@ -1,9 +1,9 @@
 .DailyForecast {
   margin: 5px;
-  /* border: 0.5px solid blue; */
+  border: 0.5px solid white;
   border-radius: 15px;
   background-color: #ffffff38;
-  width: 6.5rem;
+  width: 7rem;
   height: 9rem;
   display: grid;
   align-items: center;

@@ -8,6 +8,7 @@ import DetailedForecast from './components/DetailedForecast';
 import getForecast from './requests/getForecast';
 import SearchForm from './components/SearchForm';
 import ErrorMessage from './components/ErrorMessage';
+import Title from './components/Title';
 
 function App() {
   const [location, setLocation] = useState({});
@@ -52,12 +53,14 @@ function App() {
 
   return (
     <div className="App">
-      <Location location={location} />
+      <Title />
       <SearchForm
         onInputChange={onInputChange}
         onSubmit={onSubmit}
         searchInput={searchInput}
       />
+      <Location location={location} />
+
       {errorCode && <ErrorMessage errorCode={errorCode} city={city} />}
       {selectedForecast && <DetailedForecast forecastItem={selectedForecast} />}
       <WeeklyForecast

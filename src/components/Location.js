@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../styles/Location.css';
 
 const Location = ({ location }) => {
   if (!location.city) {
@@ -8,7 +9,7 @@ const Location = ({ location }) => {
   }
   return (
     <h1 className="Location">
-      {location.city} {location.country}
+      {location.city}, {location.country}
     </h1>
   );
 };

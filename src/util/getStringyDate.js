@@ -4,7 +4,8 @@ const getStringyDate = (unix) => {
     month: 'short',
     day: 'numeric',
   });
-  return dateString;
+
+  return dateString.replace(/,/g, '');
 };
 
 export default getStringyDate;

@@ -1,13 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Jacques+Francois+Shadow&display=swap');
+/*font-family: 'Cutive Mono', monospace;*/
 
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Cutive Mono', monospace; 
   color: white;
+
 }
 
 code {
@@ -16,13 +15,13 @@ code {
 }
 
 
-@media screen and (max-width: 488px) {
+@media screen and (max-width: 590px) {
   html {
     font-size: 30px;
   }
 }
 
-@media screen and (min-width: 488px) and (max-width: 564px) {
+@media screen and (min-width: 590px) and (max-width: 564px) {
   html {
     font-size: 10px;
   }

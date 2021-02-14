@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App shows loading text while waiting for response on first load 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <h1
+      class="Location"
+    >
+      No city selected
+    </h1>
+    <div
+      class="SearchForm"
+    >
+      <label
+        for="search"
+      >
+        <input
+          id="search"
+          placeholder="Enter a city"
+          type="text"
+          value=""
+        />
+      </label>
+      <button
+        data-testid="search-button"
+        type="submit"
+      >
+        Search
+      </button>
+    </div>
+    <div
+      class="WeeklyForecast"
+    />
+  </div>
+</DocumentFragment>
+`;
