@@ -5,7 +5,7 @@ import '../styles/Location.css';
 
 const Location = ({ location }) => {
   if (!location.city) {
-    return <h1 className="Location">No city selected</h1>;
+    return null;
   }
   return (
     <h1 className="Location">

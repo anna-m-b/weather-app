@@ -1,17 +1,16 @@
 .DailyForecast {
-  margin: 5px;
-  border: 0.5px solid white;
-  border-radius: 15px;
+  margin: 2px;
   background-color: #ffffff38;
+  border: 1px solid #ffffff5f;
   width: 7rem;
   height: 9rem;
   display: grid;
   align-items: center;
   padding: 5px;
   font-size: 1rem;
-  box-shadow: 3px 0px 43px -1px rgba(82,120,210,0.75);
-  -webkit-box-shadow: 3px 0px 43px -1px rgba(82,120,210,0.75);
-  -moz-box-shadow: 3px 0px 43px -1px rgba(82,120,210,0.75);
+  /* box-shadow: 3px 0px 43px -1px rgba(63, 64, 67, 0.75);
+  -webkit-box-shadow: 3px 0px 43px -1px rgba(71, 73, 78, 0.75);
+  -moz-box-shadow: 3px 0px 43px -1px rgba(70, 72, 77, 0.75); */
 }
 
 .DailyForecast_icon, .DailyForecast_date {
@@ -25,7 +24,6 @@
 .DailyForecast_icon {
   font-size: 2.3rem;
   margin: 0.2rem;
-  color: #160064;
 }
 
 
@@ -38,9 +36,8 @@
   border: 0;
   padding: 0;
   padding-left: 0.6rem;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   text-align: left;
   text-decoration: underline;
-  color: #160064;
   cursor: pointer;
 }

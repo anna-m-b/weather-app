@@ -62,6 +62,7 @@ function App() {
       <Location location={location} />
 
       {errorCode && <ErrorMessage errorCode={errorCode} city={city} />}
+
       {selectedForecast && <DetailedForecast forecastItem={selectedForecast} />}
       <WeeklyForecast
         forecasts={forecasts}
