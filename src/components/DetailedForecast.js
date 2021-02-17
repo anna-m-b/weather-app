@@ -2,13 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/DetailedForecast.css';
 import getStringyDate from '../util/getStringyDate';
-import '../styles/weather-icons-wind.min.css';
 import LargeWeatherIcon from './LargeWeatherIcon';
 
 const DetailedForecast = ({ forecastItem }) => {
   const { date, temperature, humidity, wind, description } = forecastItem;
   const { max, min } = temperature;
-  const { speed, icon } = wind;
+  const { speed } = wind;
 
   return (
     <div className="DetailedForecast">
@@ -21,10 +20,7 @@ const DetailedForecast = ({ forecastItem }) => {
 
         <div className="DetailedForecast_humidity">{`Humidity: ${humidity}`}</div>
 
-        <div className="DetailedForecast_wind">
-          {`Wind: ${speed}mph `}
-          <i className={icon} />
-        </div>
+        <div className="DetailedForecast_wind">{`Wind: ${speed}mph `}</div>
       </div>
       <LargeWeatherIcon description={description} />
     </div>
@@ -40,11 +36,20 @@ DetailedForecast.propTypes = {
     }),
     wind: PropTypes.shape({
       speed: PropTypes.number,
-      icon: PropTypes.string,
     }),
     humidity: PropTypes.number,
     description: PropTypes.string,
-  }).isRequired,
+  }),
+};
+
+DetailedForecast.defaultProps = {
+  forecastItem: {
+    date: new Date().getTime(),
+    temperature: { max: 0, min: 0 },
+    humidity: 0,
+    wind: { speed: 0 },
+    description: 'Clear',
+  },
 };
 
 export default DetailedForecast;

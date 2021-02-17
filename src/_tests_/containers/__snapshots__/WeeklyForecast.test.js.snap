@@ -12,7 +12,7 @@ exports[`WeeklyForecast renders correctly 1`] = `
       <div
         class="DailyForecast_date"
       >
-        Thu, 1 Jan
+        Thu 1 Jan
       </div>
       <i
         aria-label="Stub description 1 icon"
@@ -44,7 +44,7 @@ exports[`WeeklyForecast renders correctly 1`] = `
       <div
         class="DailyForecast_date"
       >
-        Thu, 1 Jan
+        Thu 1 Jan
       </div>
       <i
         aria-label="Stub description2 icon"

@@ -1,38 +1,167 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App shows loading text while waiting for response on first load 1`] = `
+exports[`App with successful response renders correctly after getting data 1`] = `
 <DocumentFragment>
   <div
     class="App"
   >
     <h1
+      class="Title"
+    >
+      Weather Report
+    </h1>
+    <form
+      class="SearchForm"
+      data-testid="search-form"
+    >
+      <p
+        class="SearchForm_instruction"
+      >
+        Search for a UK city to see its weather forecast
+      </p>
+      <span
+        class="SearchForm_search"
+      >
+        <label
+          for="search"
+        >
+          <input
+            data-testid="search-box"
+            id="search"
+            placeholder="Enter a city"
+            type="text"
+            value=""
+          />
+        </label>
+        <button
+          data-testid="search-button"
+          type="submit"
+        >
+          Search
+        </button>
+      </span>
+    </form>
+    <h1
       class="Location"
     >
-      No city selected
+      Manchester, UK
     </h1>
     <div
-      class="SearchForm"
+      class="DetailedForecast"
     >
-      <label
-        for="search"
+      <div
+        class="DetailedForecast_info"
       >
-        <input
-          id="search"
-          placeholder="Enter a city"
-          type="text"
-          value=""
-        />
-      </label>
-      <button
-        data-testid="search-button"
-        type="submit"
-      >
-        Search
-      </button>
+        <div
+          class="DetailedForecast_date"
+        >
+          Mon 30 Apr
+        </div>
+        <div
+          class="DetailedForecast_max-temp"
+        >
+          Max Temperature: 11°c
+        </div>
+        <div
+          class="DetailedForecast_min-temp"
+        >
+          Min Temperature: 4°c
+        </div>
+        <div
+          class="DetailedForecast_humidity"
+        >
+          Humidity: 30
+        </div>
+        <div
+          class="DetailedForecast_wind"
+        >
+          Wind: 13mph 
+        </div>
+      </div>
+      <img
+        alt="Clear icon"
+        class="LargeWeatherIcon"
+        src="sunny.png"
+      />
     </div>
     <div
       class="WeeklyForecast"
-    />
+    >
+      <div
+        class="DailyForecast"
+        data-testid="daily-forecast"
+      >
+        <div
+          class="DailyForecast_date"
+        >
+          Mon 30 Apr
+        </div>
+        <i
+          aria-label="Clear icon"
+          class="wi wi-day-sunny DailyForecast_icon"
+          data-testid="weather-icon"
+          name="owm"
+        />
+        <div
+          class="DailyForecast_temperature"
+        >
+          11°c
+        </div>
+        <div
+          class="DailyForecast_description"
+        >
+          Clear
+        </div>
+        <button
+          class="DailyForecast_more-details"
+          type="button"
+        >
+          More details
+        </button>
+      </div>
+      <div
+        class="DailyForecast"
+        data-testid="daily-forecast"
+      >
+        <div
+          class="DailyForecast_date"
+        >
+          Tue 1 May
+        </div>
+        <i
+          aria-label="Stormy icon"
+          class="wi wi-day-thunderstorm DailyForecast_icon"
+          data-testid="weather-icon"
+          name="owm"
+        />
+        <div
+          class="DailyForecast_temperature"
+        >
+          13°c
+        </div>
+        <div
+          class="DailyForecast_description"
+        >
+          Stormy
+        </div>
+        <button
+          class="DailyForecast_more-details"
+          type="button"
+        >
+          More details
+        </button>
+      </div>
+    </div>
   </div>
+</DocumentFragment>
+`;
+
+exports[`App with successful response shows loading text while waiting for response on first load 1`] = `
+<DocumentFragment>
+  <h1
+    class="Loading"
+  >
+    Loading...
+  </h1>
 </DocumentFragment>
 `;

@@ -12,21 +12,12 @@
 } 
 
 .DetailedForecast_info {
-  padding: 5px;
-  /* width: 100%; */
-  /* margin-left: 50px; */
-  /* align-self: center; */
   justify-self: end;
-  /* border-right: 1px solid rgba(142, 142, 142, 0.728); */
-  
-  /* justify-items: center; */
-
 }
 
 
  .DetailedForecast_info > * {
   margin: 1rem;
-  /* border-right: 1px solid rgba(142, 142, 142, 0.728); */
 }
 
 .DetailedForecast_date {
@@ -34,18 +25,40 @@
   font-weight: 800; 
 }
 
-
-
-
 .LargeWeatherIcon {
   width: 12rem;
   margin: 0;
   justify-self: start;
-  
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    width: 12rem;
+  }
+  50% {
+    width: 11.8rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .DetailedForecast_info {
-    font-size: 0.6rem;
+    font-size: 0.68rem;
+  }
+  .DetailedForecast_date {
+    font-size: 1rem;
+  }
+  .LargeWeatherIcon {
+    width: 9rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+  @keyframes pulse {
+    0%, 100% {
+      width: 9rem;
+    }
+    50% {
+      width: 8.8rem;
+    }
   }
 }

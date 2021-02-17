@@ -7,11 +7,16 @@
   justify-content: space-between;
   align-content: center;
   padding-bottom: 40px;
-  
 }
 
+@media screen and (max-width: 300px) {
+  .WeeklyForecast {
+    align-content: space-around;
+    flex-direction: column;
+  }
+}
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 300px) and (max-width: 600px) {
   .WeeklyForecast {
     justify-content: center;
   }

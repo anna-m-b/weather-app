@@ -2,25 +2,36 @@
 
 exports[`SearchForm renders correctly 1`] = `
 <DocumentFragment>
-  <div
+  <form
     class="SearchForm"
+    data-testid="search-form"
   >
-    <label
-      for="search"
+    <p
+      class="SearchForm_instruction"
     >
-      <input
-        id="search"
-        placeholder="Enter a city"
-        type="text"
-        value="Manchester"
-      />
-    </label>
-    <button
-      data-testid="search-button"
-      type="submit"
+      Search for a UK city to see its weather forecast
+    </p>
+    <span
+      class="SearchForm_search"
     >
-      Search
-    </button>
-  </div>
+      <label
+        for="search"
+      >
+        <input
+          data-testid="search-box"
+          id="search"
+          placeholder="Enter a city"
+          type="text"
+          value="Manchester"
+        />
+      </label>
+      <button
+        data-testid="search-button"
+        type="submit"
+      >
+        Search
+      </button>
+    </span>
+  </form>
 </DocumentFragment>
 `;

@@ -5,7 +5,7 @@ import '../styles/normalize.css';
 
 const SearchForm = ({ onInputChange, onSubmit, searchInput }) => {
   return (
-    <div className="SearchForm">
+    <form className="SearchForm" onSubmit={onSubmit} data-testid="search-form">
       <p className="SearchForm_instruction">
         Search for a UK city to see its weather forecast
       </p>
@@ -16,14 +16,15 @@ const SearchForm = ({ onInputChange, onSubmit, searchInput }) => {
             value={searchInput}
             placeholder="Enter a city"
             id="search"
+            data-testid="search-box"
             onChange={onInputChange}
           />
         </label>
-        <button type="submit" onClick={onSubmit} data-testid="search-button">
+        <button type="submit" data-testid="search-button">
           Search
         </button>
       </span>
-    </div>
+    </form>
   );
 };
 

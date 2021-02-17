@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import WeeklyForecast from './containers/WeeklyForecast';
 import Location from './components/Location';
 import DetailedForecast from './components/DetailedForecast';
-import getForecast from './requests/getForecast';
+import getForecastData from './requests/getForecast';
 import SearchForm from './components/SearchForm';
 import ErrorMessage from './components/ErrorMessage';
 import Title from './components/Title';
@@ -23,7 +23,18 @@ function App() {
   );
 
   useEffect(() => {
-    getForecast(setSelectedDate, setLocation, setForecasts, setErrorCode, city);
+    const getForecast = async () => {
+      try {
+        const result = await getForecastData(city);
+        setSelectedDate(result.data.forecasts[0].date);
+        setLocation(result.data.location);
+        setForecasts(result.data.forecasts);
+      } catch (error) {
+        setErrorCode(error.response.status);
+        console.error('logging', { error });
+      }
+    };
+    getForecast();
   }, [city]);
 
   useEffect(() => {
@@ -41,8 +52,9 @@ function App() {
     setSearchInput(e.target.value);
   };
 
-  const onSubmit = () => {
-    setErrorCode();
+  const onSubmit = (e) => {
+    e.preventDefault();
+    setErrorCode(0);
     setCity(searchInput);
     setSearchInput('');
   };
@@ -61,9 +73,10 @@ function App() {
       />
       <Location location={location} />
 
-      {errorCode && <ErrorMessage errorCode={errorCode} city={city} />}
+      {errorCode > 0 && <ErrorMessage errorCode={errorCode} city={city} />}
 
-      {selectedForecast && <DetailedForecast forecastItem={selectedForecast} />}
+      <DetailedForecast forecastItem={selectedForecast} />
+
       <WeeklyForecast
         forecasts={forecasts}
         handleMoreDetailsClick={handleMoreDetailsClick}

@@ -1,19 +1,13 @@
 
 .SearchForm {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; */
   grid-column: 1 / 3;
   display: grid;
   justify-content: center;
   width: 100%;
   padding-top: 10px;
-  padding-bottom: 10px;
-  /* border-bottom: 1px solid rgba(142, 142, 142, 0.728);
-  border-top: 1px solid rgba(142, 142, 142, 0.728); */
+  padding-bottom: 15px;
   margin: 10px 0 10px 0;
-
+  border-bottom: 2px solid rgba(0, 0, 0, 0.762);
 }
 
 .SearchForm_search {
@@ -37,7 +31,7 @@
   width: 100px;
   margin-top: 6px;
   border: none;
-  background-color: rgba(0, 0, 0, 0.762);
+  background-color: rgba(0, 0, 0, 0.81);
   color: white;
   border-radius: 5px;
 }

@@ -8,10 +8,8 @@
   align-items: center;
   padding: 5px;
   font-size: 1rem;
-  /* box-shadow: 3px 0px 43px -1px rgba(63, 64, 67, 0.75);
-  -webkit-box-shadow: 3px 0px 43px -1px rgba(71, 73, 78, 0.75);
-  -moz-box-shadow: 3px 0px 43px -1px rgba(70, 72, 77, 0.75); */
 }
+
 
 .DailyForecast_icon, .DailyForecast_date {
   justify-self: center;
@@ -26,11 +24,6 @@
   margin: 0.2rem;
 }
 
-
-.DailyForecast_date {
-  font-weight: 500;
-}
-
 .DailyForecast_more-details {
   background: none;
   border: 0;
@@ -40,4 +33,18 @@
   text-align: left;
   text-decoration: underline;
   cursor: pointer;
+}
+
+@media screen and (max-width: 300px) {
+  .DailyForecast {
+    width: 12rem;
+    height: 14rem;
+    font-size: 1.3rem;
+  }
+  .DailyForecast_more-details {
+    font-size: 1.2rem;
+  }
+  .DailyForecast_icon {
+    font-size: 3.5rem;
+  }
 }

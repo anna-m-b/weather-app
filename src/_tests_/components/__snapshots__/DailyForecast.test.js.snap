@@ -9,7 +9,7 @@ exports[`DailyForecast renders correctly 1`] = `
     <div
       class="DailyForecast_date"
     >
-      Fri, 4 May
+      Fri 4 May
     </div>
     <i
       aria-label="Rainy icon"

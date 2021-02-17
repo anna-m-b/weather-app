@@ -22,8 +22,8 @@ describe('DailyForecast', () => {
     });
 
     it('renders the date', () => {
-      expect(screen.getByText('Fri, 4 May')).toBeTruthy();
-      expect(screen.getByText('Fri, 4 May')).toHaveClass('DailyForecast_date');
+      expect(screen.getByText('Fri 4 May')).toBeTruthy();
+      expect(screen.getByText('Fri 4 May')).toHaveClass('DailyForecast_date');
     });
 
     it('renders a weather icon', () => {

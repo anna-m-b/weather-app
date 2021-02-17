@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import WeatherIcon from 'react-icons-weather';
 import getStringyDate from '../util/getStringyDate';
 import '../styles/DailyForecast.css';
-import '../styles/weather-icons.min.css';
 
 const DailyForecast = ({
   date,

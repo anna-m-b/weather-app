@@ -5,14 +5,14 @@ import '../styles/ErrorMessage.css';
 const ErrorMessage = ({ errorCode, city }) => {
   if (errorCode === 404) {
     return (
-      <div className="ErrorMessage" data-testid="invalid-city">
+      <div className="ErrorMessage" data-testid="error-invalid-city">
         {`No weather data for ${city} available`}
       </div>
     );
   }
   if (errorCode === 500) {
     return (
-      <div className="ErrorMessage">
+      <div className="ErrorMessage" data-testid="server-error">
         There was a problem getting data. Please refresh the page.
       </div>
     );
