@@ -10,7 +10,7 @@ const ErrorMessage = ({ errorCode, city }) => {
       </div>
     );
   }
-  if (errorCode === 500) {
+  if (errorCode !== 404) {
     return (
       <div className="ErrorMessage" data-testid="server-error">
         There was a problem getting data. Please refresh the page.

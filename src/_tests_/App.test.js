@@ -1,13 +1,11 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import axios from 'axios';
+
 import App from '../App';
 import getForecast from '../requests/getForecast';
 
 jest.mock('../requests/getForecast');
-
-jest.mock('axios');
 
 describe('App', () => {
   describe('with successful response', () => {
@@ -104,48 +102,34 @@ describe('App', () => {
   });
 
   describe('with errors', () => {
-    it('renders an error message when api sends back a 404', async () => {
-      axios.get.mockResolvedValueOnce(
-        new Error({
-          response: {
-            data: 'Not Found',
-            status: 404,
-          },
-        })
-      );
+    it('renders an error message if no response from api', async () => {
+      const error = {
+        response: {
+          status: 500,
+        },
+      };
+
+      getForecast.mockResolvedValue(Promise.reject(error));
       const { getByText } = render(<App />);
+
       await waitFor(() =>
-        expect(getByText(/no weather data/i)).toBeInTheDocument()
+        expect(getByText(/there was a problem/i)).toBeInTheDocument()
       );
+    });
+
+    it('renders an error message when api sends back a 404', async () => {
+      const error = {
+        response: {
+          status: 404,
+        },
+      };
+
+      getForecast.mockResolvedValue(Promise.reject(error));
+      const { getByText } = render(<App />);
+
+      await waitFor(() => {
+        expect(getByText(/no weather data/i)).toBeInTheDocument();
+      });
     });
   });
 });
-
-// Axios error response
-// {
-//   "data": "Not Found",
-//   "status": 404,
-//   "statusText": "Not Found",
-//   "headers": {
-//     "content-type": "text/plain; charset=utf-8"
-//   },
-//   "config": {
-//     "url": "https://mcr-codes-weather-app.herokuapp.com/forecast?city=efsfas",
-//     "method": "get",
-//     "headers": {
-//       "Accept": "application/json, text/plain, */*"
-//     },
-//     "transformRequest": [
-//       null
-//     ],
-//     "transformResponse": [
-//       null
-//     ],
-//     "timeout": 0,
-//     "xsrfCookieName": "XSRF-TOKEN",
-//     "xsrfHeaderName": "X-XSRF-TOKEN",
-//     "maxContentLength": -1,
-//     "maxBodyLength": -1
-//   },
-//   "request": {}
-// }

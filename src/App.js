@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-console */
 import './styles/App.css';
 import React, { useState, useEffect } from 'react';
 import WeeklyForecast from './containers/WeeklyForecast';
@@ -16,7 +14,8 @@ function App() {
   const [selectedDate, setSelectedDate] = useState();
   const [searchInput, setSearchInput] = useState('');
   const [city, setCity] = useState('');
-  const [errorCode, setErrorCode] = useState();
+  const [errorCode, setErrorCode] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate
@@ -29,9 +28,15 @@ function App() {
         setSelectedDate(result.data.forecasts[0].date);
         setLocation(result.data.location);
         setForecasts(result.data.forecasts);
+        setIsLoading(false);
       } catch (error) {
-        setErrorCode(error.response.status);
-        console.error('logging', { error });
+        if (error.response) {
+          setErrorCode(error.response.status);
+          setIsLoading(false);
+        } else {
+          setErrorCode(400);
+          setIsLoading(false);
+        }
       }
     };
     getForecast();
@@ -59,7 +64,7 @@ function App() {
     setSearchInput('');
   };
 
-  if (!forecasts.length) {
+  if (isLoading) {
     return <h1 className="Loading">Loading...</h1>;
   }
 
