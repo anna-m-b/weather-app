@@ -9,8 +9,7 @@ This weather app uses the Open Weather API to retrieve weather forecasts for UK 
 
 *Project status: complete*
   
-  
-*Screenshot:*
+
 
 <img src="images-readme/weather-app-scrnsht.png" />
 
