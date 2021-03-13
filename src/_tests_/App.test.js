@@ -51,7 +51,7 @@ describe('App', () => {
     });
 
     it('shows loading text while waiting for response on first load', () => {
-      getForecast.mockReturnValue(new Promise(() => {}));
+      getForecast.mockResolvedValue(new Promise(() => {}));
       const { asFragment } = render(<App />);
       expect(asFragment()).toMatchSnapshot();
     });
